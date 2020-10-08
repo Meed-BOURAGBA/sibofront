@@ -1,0 +1,20 @@
+<table class="table table-striped">
+<thead>
+    <ng-container *ngFor="let c of columns">
+        <th scope="col">{{c.libelle}}</th>
+    </ng-container>
+</thead>
+<tbody>
+    <ng-container *ngFor="let line of list; index as i">
+        <tr class="impair">
+            <ng-container *ngFor="let c of columns">
+                <td>
+                    {{line[c.attribute]}}
+                </td>
+            </ng-container>
+        </tr>
+    </ng-container>
+</tbody>     
+</table>    
+
+

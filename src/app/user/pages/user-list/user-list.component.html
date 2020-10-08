@@ -1,0 +1,8 @@
+<div class="row">
+    <h2 class="title">Liste des utilisateurs</h2>
+    <button type="button" class="btn btn-primary add-btn" routerLink="user/add">Ajouter un utilisateur</button>    
+</div>
+
+<div class="user-list">
+    <app-table *ngIf="userList.length>0" [list]="userList" [columns]="columns"></app-table>
+</div>
